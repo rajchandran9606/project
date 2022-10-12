@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF8">
+	<title>Title</title>
+	<script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script>
+	<!-- <script src="../package/js-image-zoom.js"></script> -->
+</head>
+
+<body>
+	<div id="img-container">
+		<img src="https://www.thisisbarry.com/wp-content/uploads/Kabali/Kabali.jpg" alt="A Hero" />
+		<div>
+			<script>
+				var options1 = {
+					width: 500,
+					heigt: 300,
+					zoomWidth: 500,
+					offset: { vertical: 150, horizontal: 40 }
+				}
+				new ImageZoom(document.getElementById("img-container"), options1);
+
+			</script>
+</body>
+
+</html>

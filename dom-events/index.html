@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head Part-->>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document - Events</title>
+	<!--Boostratp Css CDN-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+
+
+
+
+	<!--Internal Css (Customized)-->
+	<style type="text/css">
+		button {
+			width: 200px;
+			height: 50px;
+			border: 2px solid black;
+			color: white;
+			font-weight: bolder;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			background-color: red;
+		}
+
+		input {
+			width: 200px;
+			height: 50px;
+			border: 2px solid black;
+			font-weight: bold;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			background-color: red;
+		}
+	</style>
+
+
+
+</head>
+
+<!--body Part-->
+
+<body>
+	<!--  start of container -->
+	<div class="container">
+
+
+		<!-- row-1 -->
+		<div class="row row-1">
+			<div class="col-12">
+				<div class="text-center">
+					<h1>Javascript Events</h1>
+				</div>
+			</div>
+			<!-- end of row-1 -->
+		</div>
+
+
+		<!-- row-2 -->
+		<div class="row mt-5">
+			<!--code for mouse-hover-->
+			<div class="col-4">
+				<h2>OnMouseover :</h2>
+				<small>mouse over to change button background color</small>
+				<button type="button" id="btn-1">Mouse over</button>
+			</div>
+			<!--code for mouseout-->
+			<div class="col-4">
+				<h2>OnMouseout :</h2>
+				<small>mouse over to change button background color</small>
+				<button type="button" id="btn-2">Mouse out</button>
+			</div>
+			<!--code for onclick-->
+			<div class="col-4">
+				<h2>Onclick :</h2>
+				<small>click to change button background color</small>
+				<button type="button" id="btn-3">Onclick</button>
+			</div>
+			<!-- end of row-2 -->
+		</div>
+
+
+		<!-- row-3 -->
+		<div class="row mt-5">
+			<!--code for doubleclick-->
+			<div class="col-4">
+				<h2>Ondblclick :</h2>
+				<small>Double click to change button background color</small>
+				<button type="button" id="btn-4">ondblclick</button>
+			</div>
+			<!--code for onfocus-->
+			<div class="col-4">
+				<h2>Onfocus :</h2>
+				<small>click to change input background color</small>
+				<input type="text" id="btn-5" />
+			</div>
+			<!--code for onblur-->
+			<div class="col-4">
+				<h2>Onblur :</h2>
+				<small>Change Lower case to upper case onblur Events</small>
+				<input type="text" id="btn-6" />
+			</div>
+
+			<!-- end of row-3 -->
+		</div>
+
+
+		<!-- end of container -->
+	</div>
+
+
+
+	<!--Script-->
+	<script type="text/javascript">
+		var btn_1 = document.getElementById("btn-1");
+		var btn_2 = document.getElementById("btn-2");
+		var btn_3 = document.getElementById("btn-3");
+		var btn_4 = document.getElementById("btn-4");
+		var btn_5 = document.getElementById("btn-5");
+		var btn_6 = document.getElementById("btn-6");
+
+		// Mouse-hover
+		btn_1.addEventListener("mouseover", function () {
+			btn_1.style.background = "blue";
+		});
+
+		// Mouse-out
+		btn_2.addEventListener("mouseout", function () {
+			btn_2.style.background = "green";
+		});
+
+		// onclick
+		btn_3.addEventListener("click", function () {
+			btn_3.style.background = "black";
+		});
+
+		// double click
+		btn_4.addEventListener("dblclick", function () {
+			btn_4.style.background = "dodgerblue";
+		});
+
+		// on-focus
+		btn_5.addEventListener("focus", function () {
+			btn_5.style.background = "lightpink";
+		});
+
+		// on-blur
+		btn_6.addEventListener("blur", function () {
+			btn_6.style.textTransform = "uppercase";
+			btn_6.style.background = "white";
+		});
+
+
+	</script>
+
+
+</body>
+
+</html>
